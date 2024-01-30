@@ -1,0 +1,44 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+set hlsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+
+"" Remaps ""
+"Reset leader to Space"
+let mapleader = "\<space>"
+nmap <space> <nop>
+"Clear buffer of search highlight"
+nmap <silent> <leader><cr> :noh<cr>
+"Center cursor when jumping up/down"
+map <C-u> <C-u>zz
+map <C-d> <C-d>zz
+"" Map <leader> to start actions
+map <leader>d <Action>(Debug)
+map <leader>r <Action>(Run)
+map <leader>s <Action>(Stop)
+map <leader>b <Action>(ToggleLineBreakpoint)
+"Tab navigation"
+"<C-W-h/l"> to swith between tab groups
+"<C-Shift-W> close tab group"
+map <A-h> <Action>(PreviousTab)
+map <A-l> <Action>(NextTab)
+map <C-A-right> <Action>(MoveTabRight)
+map <C-A-left> <Action>(MoveEditorToOppositeTabGroup)
+map <C-S-w> <Action>(CloseEditor)
