@@ -25,7 +25,7 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>j <Action>(GotoNextError)
 map <leader>k <Action>(GotoPreviousError)
 "Generate
-map <C-A-cr> <Action>(Generate)
+map <leader><cr> <Action>(Generate)
 "Tab navigation"
 map <A-h> <Action>(PreviousTab)
 map <A-l> <Action>(NextTab)
